@@ -83,15 +83,6 @@ public class DateTimeExamplesJava8 {
 		Duration duration = Duration.ofMinutes(60);
 		System.out.println("Duration of 60 minutes: " + duration);
 		
-		//Backward compatibility
-		System.out.println("Backward compatible");
-		Calendar cal = Calendar.getInstance();
-		Date date3 = cal.getTime();
-		LocalDateTime localDateTime = LocalDateTime.ofInstant(date3.toInstant(), ZoneId.systemDefault());
-		LocalTime localTime = localDateTime.toLocalTime();
-		System.out.println("Old date type: \t\t\t" + date 
-				+ "\nConverted date type: \t\t" + localDateTime
-				+ "\nConverted to local time: \t" + localTime);
 	}
 
 }

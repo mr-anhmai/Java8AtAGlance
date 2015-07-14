@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.*;
 
 import com.csc.lap.domain.Dish;
+import com.csc.lap.domain.ExampleData;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
@@ -11,23 +12,13 @@ import static java.util.stream.Collectors.toList;
 public class StreamBasic {
 
     public static void main(String...args){
-        // Java 7
-        //getLowCaloricDishesNamesInJava7(Dish.menu).forEach(System.out::println);
-
-        //System.out.println("---");
-
-        // Java 8
-        //getLowCaloricDishesNamesInJava8(Dish.menu).forEach(System.out::println);
-        //getLowCaloricDishesNamesInJava8WithTrail(Dish.products).forEach(System.out::println);
+        getLowCaloricDishesNamesInJava8(ExampleData.menu).forEach(System.out::println);
+        getLowCaloricDishesNamesInJava8WithTrail(ExampleData.products).forEach(System.out::println);
         
         
         Stream.of(1, 5, 8,  4, 2).filter( n -> n < 5)
         	.collect(toList()).forEach(System.out::println);
         
-        
-
-
-
         int t = 
         Stream.of(1, 5, 8,  4, 2).reduce(0, (a, b) -> a + b);
         
